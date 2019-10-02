@@ -12,7 +12,7 @@ import { RequestService } from '../../../../shared-ng/services/services';
 export class AdminCreateComponent implements OnInit {
   jobName: string = '';
   jobDesc: string = '';
-  visibility: number = 1;
+  visibility: boolean;
   owner: string = '';
   imgLink: string = '';
   questions: any[] = [{question: ''}];
@@ -44,7 +44,7 @@ export class AdminCreateComponent implements OnInit {
       if(data.status == 'submitted'){
         this.jobName = '';
         this.jobDesc = '';
-        this.visibility = 1;
+        this.visibility = true;
 	this.featured = false;
         this.owner = '';
         this.imgLink = '';
